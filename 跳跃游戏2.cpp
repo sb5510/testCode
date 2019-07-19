@@ -1,8 +1,8 @@
-//¸ø¶¨Á½¸öÒÔ×Ö·û´®ĞÎÊ½±íÊ¾µÄ·Ç¸ºÕûÊı num1 ºÍ num2£¬·µ»Ø num1 ºÍ num2 µÄ³Ë»ı£¬ËüÃÇµÄ³Ë»ıÒ²±íÊ¾Îª×Ö·û´®ĞÎÊ½¡£
+//ç»™å®šä¸¤ä¸ªä»¥å­—ç¬¦ä¸²å½¢å¼è¡¨ç¤ºçš„éè´Ÿæ•´æ•° num1 å’Œ num2ï¼Œè¿”å› num1 å’Œ num2 çš„ä¹˜ç§¯ï¼Œå®ƒä»¬çš„ä¹˜ç§¯ä¹Ÿè¡¨ç¤ºä¸ºå­—ç¬¦ä¸²å½¢å¼ã€‚
 class Solution {
 public:
     int jump(vector<int>& nums) {
-		//´ÓÎ²²¿¿ªÊ¼²éÕÒ
+	//ä»å°¾éƒ¨å¼€å§‹æŸ¥æ‰¾
         int end = nums.size() - 1;
         int result = 0;
         while(end>0)
@@ -19,7 +19,7 @@ public:
         }
         return result;
     }
-	//Ì°ĞÄ
+	//è´ªå¿ƒ
 	int jump2(vector<int>& nums) {
         int dis = 0;
         int result = 0;
@@ -30,12 +30,12 @@ public:
             int pre = dis;
             for(;i<=pre;i++)
             {
-                dis = max(dis,i+nums[i]);//µÃµ½Ã¿Ò»²½×î³¤¾àÀë
+                dis = max(dis,i+nums[i]);//å¾—åˆ°æ¯ä¸€æ­¥æœ€é•¿è·ç¦»
             }
         }
         return result;
     }
-	//¶¯Ì¬¹æ»®
+	//åŠ¨æ€è§„åˆ’
 	int jump3(vector<int>& nums) {
         int *dp = new int[nums.size()]();
         for(int i = 1;i<nums.size();i++)
